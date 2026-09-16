@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112929149644",
+    "project_id": "monstrin1",
+    "storage_bucket": "monstrin1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112929149644:android:4dada782c55c6f12f66869",
+        "android_client_info": {
+          "package_name": "com.example.monstrin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqsOLNp-8gkiHjgjsHBJO-pShazwom8iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
