@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Filtros"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Tipo"
+        android:textColor="@color/cinza" />
+
+    <RadioGroup
+        android:id="@+id/rg_tipo_filtro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_todos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Todos"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rb_filme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filme"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rb_serie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Série"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_tipo_filtro_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_livro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Livro"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/rb_jogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jogo"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Nota mínima"
+        android:textColor="@color/cinza" />
+
+    <RatingBar
+        android:id="@+id/rb_nota_filtro"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:numStars="5"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Ano de Conclusão"
+        android:textColor="@color/cinza" />
+
+    <EditText
+        android:id="@+id/et_ano_filtro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:hint="Ex: 2024"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/cinza" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_limpar_filtro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/cinza"
+            android:text="Limpar" />
+
+        <Button
+            android:id="@+id/btn_aplicar_filtro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/azul_claro"
+            android:text="Aplicar" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396570868789",
+    "project_id": "mylistt1235",
+    "storage_bucket": "mylistt1235.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396570868789:android:1720e29f14031ada89457c",
+        "android_client_info": {
+          "package_name": "com.example.mylist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7azfqAiNt-5-q478hunFfPqAMSqzWzAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

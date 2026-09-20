@@ -1,0 +1,17 @@
+v1- versão do celular
+v2 - tudo pronto e novo, app crasha quando adiciona uma nova nota
+v3 - lista funcionando CERTINHO
+v4 - counters e pesquisa por texto funcionando + marcador colorido pros tipos no item
+v5- pesquisa edittext mais bonitinha 
+v6- conteúdo quase pronto
+
+
+
+
+hierarquia
+1 usuário
+2 conteúdo
+3 filme,serie jogo ou livro
+no de contedudos e no de usuários
+depois no de filmes/series/jogos/ livros e usuários 001,002...
+

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         monsterList = new ArrayList<>();
         adapter = new MonsterAdapter(monsterList, this);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
         recyclerView.setAdapter(adapter);
     }
 
@@ -64,8 +65,18 @@ public class MainActivity extends AppCompatActivity {
                     for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                         Monster monster = document.toObject(Monster.class);
                         monster.setId(document.getId());
+                        
+                        // Fallback para itens antigos sem timestamp
+                        if (monster.getTimestamp() == null) {
+                            monster.setTimestamp(0L);
+                        }
+                        
                         monsterList.add(monster);
                     }
+                    
+                    // Ordenar manualmente: maior timestamp (mais recente) primeiro
+                    monsterList.sort((m1, m2) -> Long.compare(m2.getTimestamp(), m1.getTimestamp()));
+                    
                     adapter.notifyDataSetChanged();
                 })
                 .addOnFailureListener(e -> {

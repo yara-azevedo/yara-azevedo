@@ -289,6 +289,7 @@ public class ContentActivity extends AppCompatActivity {
         }
 
         if (documentId == null) {
+            data.put("timestamp", System.currentTimeMillis());
             FirebaseFirestore.getInstance().collection("monstros")
                     .add(data)
                     .addOnSuccessListener(documentReference -> {
